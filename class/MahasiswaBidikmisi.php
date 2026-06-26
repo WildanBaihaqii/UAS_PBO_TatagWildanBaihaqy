@@ -37,8 +37,20 @@ class MahasiswaBidikmisi extends Mahasiswa {
         }
         return $daftarMahasiswa;
     }
+    // Tahap 5 Overiding
+    public function hitungTagihanSemester(): void {
+        echo "<h4>Perhitungan Tagihan:</h4>";
+        echo "Status Biaya Kampus : Ditanggung Negara (KIP-Kuliah)<br>";
+        echo "<strong>Total Wajib Bayar : Rp 0 (Gratis Penuh)</strong><br><hr>";
+    }
 
-    // Dikosongkan dulu, siap untuk di-override pada Tahap 5
-    public function hitungTagihanSemester(): void {}
-    public function tampilkanSpesifikasiAkademik(): void {}
+    public function tampilkanSpesifikasiAkademik(): void {
+        echo "<h3>=== Data Akademik Mahasiswa Bidikmisi ===</h3>";
+        echo "ID Mahasiswa : " . $this->id_mahasiswa . "<br>";
+        echo "Nama Lengkap : " . $this->nama_mahasiswa . "<br>";
+        echo "NIM          : " . $this->nim . "<br>";
+        echo "Semester     : " . $this->semester . "<br>";
+        echo "No KIP Kuliah      : " . $this->nomorKipKuliah . "<br>";
+        echo "Subsidi Dana Saku  : Rp " . number_format($this->danaSakuSubsidi, 0, ',', '.') . " / bulan<br>";
+    }
 }
