@@ -1,6 +1,6 @@
 <?php
 
-class KoneksiDB {
+class Koneksi{
     private static string $host = "127.0.0.1";// sesuaikan dengan laragonnya (saya pakai mariadb linux)
     private static string $db_name = "db_uas_pbo_trpl1a_tatagwilldanbaihaqy";
     private static string $username = "Baihaqy"; // Sesuaikan dengan username MySQL Anda
