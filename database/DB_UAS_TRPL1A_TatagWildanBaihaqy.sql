@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2026 at 02:26 AM
+-- Generation Time: Jun 26, 2026 at 02:32 AM
 -- Server version: 12.3.2-MariaDB
 -- PHP Version: 8.5.7
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_mahasiswa`
+-- Table structure for table `tabel_mahasiswa`
 --
 
-CREATE TABLE `table_mahasiswa` (
+CREATE TABLE `tabel_mahasiswa` (
   `id_mahasiswa` int(11) NOT NULL,
   `nama_mahasiswa` varchar(100) NOT NULL,
   `nim` varchar(15) NOT NULL,
@@ -43,10 +43,10 @@ CREATE TABLE `table_mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `table_mahasiswa`
+-- Dumping data for table `tabel_mahasiswa`
 --
 
-INSERT INTO `table_mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `nim`, `semester`, `tarif_ukt_nominal`, `jenis_pembayaran`, `golongan_ukt`, `nama_wali`, `nomer_kip_kuliah`, `dana_saku_subsidi`, `nama_instansi_beasiswa`, `minimal_ipk_syarat`) VALUES
+INSERT INTO `tabel_mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `nim`, `semester`, `tarif_ukt_nominal`, `jenis_pembayaran`, `golongan_ukt`, `nama_wali`, `nomer_kip_kuliah`, `dana_saku_subsidi`, `nama_instansi_beasiswa`, `minimal_ipk_syarat`) VALUES
 (1, 'Tatag Willdan', '202601001', 2, 7500000.00, 'mandiri', 'Golongan 5', 'Budi Santoso', NULL, NULL, NULL, NULL),
 (2, 'Siti Aminah', '202601002', 2, 6000000.00, 'mandiri', 'Golongan 4', 'Ahmad Subarjo', NULL, NULL, NULL, NULL),
 (3, 'Randi Pangalila', '202601003', 4, 7500000.00, 'mandiri', 'Golongan 5', 'Hendra Wijaya', NULL, NULL, NULL, NULL),
@@ -73,9 +73,9 @@ INSERT INTO `table_mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `nim`, `semeste
 --
 
 --
--- Indexes for table `table_mahasiswa`
+-- Indexes for table `tabel_mahasiswa`
 --
-ALTER TABLE `table_mahasiswa`
+ALTER TABLE `tabel_mahasiswa`
   ADD PRIMARY KEY (`id_mahasiswa`),
   ADD UNIQUE KEY `nim` (`nim`);
 
@@ -84,9 +84,9 @@ ALTER TABLE `table_mahasiswa`
 --
 
 --
--- AUTO_INCREMENT for table `table_mahasiswa`
+-- AUTO_INCREMENT for table `tabel_mahasiswa`
 --
-ALTER TABLE `table_mahasiswa`
+ALTER TABLE `tabel_mahasiswa`
   MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
