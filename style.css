@@ -1,0 +1,72 @@
+/* style.css - Pengaturan Tampilan Sistem Informasi Akademik */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.kategori-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.kategori-title {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* Pewarnaan Khusus Tiap Kelompok Kategori */
+.mandiri .kategori-title {
+    border-color: #e67e22;
+    color: #d35400;
+}
+
+.bidikmisi .kategori-title {
+    border-color: #2ecc71;
+    color: #27ae60;
+}
+
+.prestasi .kategori-title {
+    border-color: #9b59b6;
+    color: #8e44ad;
+}
+
+/* Layout Grid Kartu Mahasiswa */
+.grid-mahasiswa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-mahasiswa {
+    background: #fafbfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-mahasiswa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
