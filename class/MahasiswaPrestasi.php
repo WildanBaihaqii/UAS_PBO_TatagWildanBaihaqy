@@ -37,8 +37,26 @@ class MahasiswaPrestasi extends Mahasiswa {
         }
         return $daftarMahasiswa;
     }
+    public function hitungTagihanSemester(): void {
+        $totalTagihan = $this->tarifUktNominal * 0.25;
+        
+        echo "<h4>Perhitungan Tagihan:</h4>";
+        echo "Tarif UKT Asli    : Rp " . number_format($this->tarifUktNominal, 0, ',', '.') . "<br>";
+        echo "Diskon Prestasi   : 75%<br>";
+        echo "<strong>Total Wajib Bayar (25%) : Rp " . number_format($totalTagihan, 0, ',', '.') . "</strong><br><hr>";
+    }
 
-    // Dikosongkan dulu, siap untuk di-override pada Tahap 5
-    public function hitungTagihanSemester(): void {}
-    public function tampilkanSpesifikasiAkademik(): void {}
+    /**
+     * Override Method - Tahap 5
+     * Menampilkan spesifikasi data akademik khusus jalur prestasi
+     */
+    public function tampilkanSpesifikasiAkademik(): void {
+        echo "<h3>=== Data Akademik Mahasiswa Prestasi ===</h3>";
+        echo "ID Mahasiswa : " . $this->id_mahasiswa . "<br>";
+        echo "Nama Lengkap : " . $this->nama_mahasiswa . "<br>";
+        echo "NIM          : " . $this->nim . "<br>";
+        echo "Semester     : " . $this->semester . "<br>";
+        echo "Pemberi Beasiswa   : " . $this->namaInstitusiBeasiswa . "<br>";
+        echo "Syarat Minimal IPK : " . number_format($this->minimalIpkSyarat, 2) . "<br>";
+    }
 }
